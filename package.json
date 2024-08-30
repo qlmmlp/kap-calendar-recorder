@@ -1,0 +1,40 @@
+{
+  "name": "kap-calendar-recorder",
+  "version": "1.0.0",
+  "description": "Automatically record meetings based on calendar events",
+  "main": "kap-calendar-plugin.js",
+  "license": "MIT",
+  "kap": {
+    "name": "Kap Calendar Recorder",
+    "description": "Automatically start recordings based on multiple calendar events",
+    "config": {
+      "calendars": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string", "title": "Calendar ID" },
+            "clientId": { "type": "string", "title": "Client ID" },
+            "clientSecret": { "type": "string", "title": "Client Secret" },
+            "refreshToken": { "type": "string", "title": "Refresh Token" }
+          }
+        }
+      },
+      "outputDirectory": {
+        "type": "string",
+        "title": "Output Directory",
+        "default": "~/Documents/KapRecordings"
+      },
+      "frameRate": {
+        "type": "number",
+        "title": "Frame Rate",
+        "default": 30
+      },
+      "scale": {
+        "type": "number",
+        "title": "Scale",
+        "default": 1
+      }
+    }
+  }
+}
